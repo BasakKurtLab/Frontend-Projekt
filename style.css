@@ -9,11 +9,15 @@ body {
 :root {
   --primaryColor: rgb(43, 18, 87);
   --secondaryColor: rgb(173, 44, 44);
+  --logoHeight: 80px;
 }
 .container {
+  width: 1100px;
+  padding: 10px 30px;
+  margin: 0 auto;
 }
 .logo {
-  height: 80px;
+  height: var(--logoHeight);
   padding: 2px;
   cursor: pointer;
   position: relative;
@@ -22,7 +26,7 @@ body {
   height: 100%;
 }
 #info {
-  width: 600px;
+  width: 400px;
   height: 100vh;
   position: fixed;
   background-color: white;
@@ -39,7 +43,7 @@ body {
   transition: transform 0.8s;
 }
 #info i {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   align-self: flex-end;
   text-align: right;
   font-size: 1.5em;
@@ -48,14 +52,14 @@ body {
   transition: transform 0.5s;
 }
 #info i:hover {
-  transform: scale(1.5+);
+  transform: scale(1.5);
 }
 #info img {
   width: 250px;
 }
 #info h5 {
   padding: 0;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 #info p {
   padding: 0;
@@ -68,10 +72,11 @@ header {
   justify-content: space-between;
 }
 nav {
-  max-width: 1200px;
+  width: 1100px;
   display: flex;
   justify-content: space-between;
-  flex-grow: 1;
+ 
+  margin: 0 auto;
 }
 nav a {
   height: 35px;
@@ -81,7 +86,7 @@ nav a {
   font-size: 1.2em;
   font-weight: bold;
   color: var(--primaryColor);
-  padding: 4px 2px;
+  padding: 4px 0;
   cursor: pointer;
   border-bottom: 1px solid transparent;
   transition: border-bottom 0.8s;
@@ -91,8 +96,8 @@ nav a:hover {
 }
 .punkt {
   background-color: var(--primaryColor);
-  width: 80px;
-  height: 80px;
+  width: var(--logoHeight);
+  height: var(--logoHeight);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,7 +110,7 @@ nav a:hover {
 }
 /*****************************************************/
 #slider {
-  height: 650px;
+  height: 550px;
 
   display: flex;
   justify-content: center;
@@ -163,3 +168,16 @@ nav a:hover {
   font-family: "Courgette", cursive;
 }
 /***************************************************/
+#leistungen {
+  background-color: rgb(204, 237, 238);
+}
+#cards {
+  display: flex;
+  justify-content: space-between;
+}
+#cards > div {
+  width: 200px;
+  height: 200px;
+  background-color: var(--primaryColor);
+  border-radius: 50%;
+}
