@@ -31,7 +31,7 @@ section {
 .sectionTitle {
   font-size: 2.2em;
   color: var(--primaryColor);
-  margin-bottom: 110px;
+  padding: 0 0 80px 0;
 }
 header {
   position: -webkit-sticky;
@@ -271,16 +271,16 @@ nav a:hover:not(a.aktiv) {
   width: 250px;
 
   box-shadow: 0px 2px 12px 2px #949090;
-  border-radius: 5px;
+  border-radius: 6px;
   border-bottom-right-radius: 0;
-  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
   margin-bottom: 30px;
   background-color: #f4f4f4;
 }
 
 .person img {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 6px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -316,19 +316,93 @@ button:hover {
   font-size: 0.9em;
   margin-top: 8px;
   display: none;
+  padding: 3px;
 }
 /*********************UBER UNS******************************/
 #uberuns p {
   color: #666666;
 }
+/*****************FOTO GALERIA*****************************/
+#fotoGaleria {
+  text-align: center;
+  color: brown;
+}
+#fotos {
+  margin: 0 auto;
+  width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#fotos img {
+  width: 250px;
+  margin: 20px;
+  box-shadow: 0px 2px 12px 2px #000000;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+#fotos img:hover {
+  transform: scale(1.1);
+}
+
+#bigBox {
+  margin-top: 50px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.63);
+  padding: 70px 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateY(-100vh);
+  transition: transform 0.5s;
+}
+#fotoBox {
+  position: relative;
+  height: 100%;
+}
+#fotoBox i {
+  position: absolute;
+  top: -1em;
+  right: -1em;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+}
+
+#bigBox img {
+  max-width: 100%;
+  max-height: 100%;
+
+  transition: transform 0.5s;
+  transform: scale(0);
+}
+
+@media (max-width: 900px) {
+  #fotos {
+    width: 90%;
+  }
+}
+
+@media (max-width: 760px) {
+  #bigBox {
+    padding: 30px;
+  }
+}
+
 /*********************KONTAKT******************************/
 #kontakt {
   background-color: #f4f4f4;
-  padding: 40px 0;
+  padding: 20px 0;
   height: 110vh;
 }
 #kontakt > h2 {
-  margin: 50px;
+  padding: 40px;
 }
 .formular {
   display: flex;
