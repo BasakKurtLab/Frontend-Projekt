@@ -324,8 +324,8 @@ button:hover {
 }
 /*****************FOTO GALERIA*****************************/
 #fotoGaleria {
+  background-color: #f4f4f4;
   text-align: center;
-  color: brown;
 }
 #fotos {
   margin: 0 auto;
@@ -397,7 +397,6 @@ button:hover {
 
 /*********************KONTAKT******************************/
 #kontakt {
-  background-color: #f4f4f4;
   padding: 20px 0;
   height: 110vh;
 }
@@ -405,8 +404,10 @@ button:hover {
   padding: 40px;
 }
 .formular {
+  background-color: #f4f4f4;
   display: flex;
   align-items: flex-start;
+  border-radius: 5px;
 }
 
 /************form link*************/
