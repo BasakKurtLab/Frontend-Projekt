@@ -12,6 +12,8 @@ const punkt = document.querySelector(".punkt");
 const cross = document.querySelector("#info>i");
 
 
+
+
 aktuel = 0;
 var meinInterval;
 
@@ -92,3 +94,46 @@ cross.onclick= function() {
 }
 
     
+function more(button) {
+   
+        let profil = button.parentElement.getElementsByClassName("profil")[0];
+        
+       
+        if (profil.style.display=="none") {
+            profil.style.display = "block";
+           
+            
+            
+        }
+        else {
+                profil.style.display = "none";
+            
+           
+        }
+        
+}
+let last ;
+
+function aktivieren(element) {
+      
+        
+
+        if (element.classList.contains("aktiv") == false)
+
+        {       
+            element.classList.add("aktiv");
+    
+            if (last != null)
+            {
+                    last.classList.remove("aktiv");
+                    
+            }
+             
+                last = element;
+        }
+
+        
+    
+        
+        
+    }

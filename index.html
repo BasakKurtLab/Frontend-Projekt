@@ -10,48 +10,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Courgette&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 
 </head>
-<body onload="erst(0)">
-    <header >
-        <div class="logo">
-            <img src="logo.jpg">
-        </div>
-        
-        <nav>
-            <a href="">Home</a>
-            <a href="">Uber Uns</a>
-            <a href="">Foto Gallerie</a>
-            <a href="">Leihinstrumente</a>
-            <a href="">Kontakt</a>
-        </nav>
-        <div class="punkt" >
-            <div class="circle"></div>
-        </div>
-        <div id="info">
-        
-            <i class="fas fa-times"></i>
+<body onload="erst(0)" >
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="logo1.jpg">
+            </div>
             
-            <img src="logo.jpg">
-            <p>Seit über 20 Jahren bietet das Musikhaus  in Berlin eine breite Auswahl von Musikinstrumenten, aktuelle Songbooks, CDs, Schallplatten und vieles mehr.</p>
-            <h5>Adresse</h5>
-            <p>Musterstraße 1, 12345 Musterstadt</p>
-
-            <h5>Telefon:</h5>
-            <p>0123 456 78 90</p>
-
-            <h5>E-mail</h5>
-            <p>mail@website.de</p>
-
-            <h5>Öffnungszeiten</h5>
-            <p>Montag: 10:00 – 18:00 Uhr</p>
-            <p>Dienstag: 10:00 – 18:00 Uhr</p>
-            <p>Mittwoch: 10:00 – 18:00 Uhr</p>
-            <p>Donnerstag: 10:00 – 18:00 Uhr</p>
-            <p>Freitag: 10:00 – 18:00 Uhr</p>
-            <p>Samstag: 10:00 – 14:00 Uhr</p>
-            <p>Sonntag: Geschlossen</p>
+            <nav>
+                <a href="#" onclick="aktivieren(this)">Home</a>
+                <a href="#uberuns" onclick="aktivieren(this)">Über Uns</a>
+                <a href="#kontakt" onclick="aktivieren(this)">Kontakt</a>
+            </nav>
+            <div class="punkt" >
+                <div class="circle"></div>
+            </div>
+            <div id="info">
             
+                <i class="fas fa-times"></i>
+                
+                <img src="logo.jpg">
+                <p>Seit über 20 Jahren bietet das Musikhaus  in Berlin eine breite Auswahl von Musikinstrumenten, aktuelle Songbooks, CDs, Schallplatten und vieles mehr.</p>
+                <h5>Adresse</h5>
+                <p>Musterstraße 1, 12345 Musterstadt</p>
+
+                <h5>Telefon:</h5>
+                <p>0123 456 78 90</p>
+
+                <h5>E-mail</h5>
+                <p>mail@website.de</p>
+
+                <h5>Öffnungszeiten</h5>
+                <p>Montag: 10:00 – 18:00 Uhr</p>
+                <p>Dienstag: 10:00 – 18:00 Uhr</p>
+                <p>Mittwoch: 10:00 – 18:00 Uhr</p>
+                <p>Donnerstag: 10:00 – 18:00 Uhr</p>
+                <p>Freitag: 10:00 – 18:00 Uhr</p>
+                <p>Samstag: 10:00 – 14:00 Uhr</p>
+                <p>Sonntag: Geschlossen</p>
+                
+            </div>
         </div>
-        
     </header>
 
     <main>
@@ -64,21 +63,186 @@
             <button id="next" onclick="play(1)" ><i class="fas fa-angle-double-right"></i></button>
 
             <h1 id="text"></h1>
-        
         </section>
 
-        <section id="leistungen" class="container">
+        <section id="leistungen">
+            <h2 class="sectionTitle" >Leistungen</h2>
+            <div class="wrapper">
+                
+                <div id="inhalt">
+                    
+                    <div id="inhaltText">
+                    <div class="line"></div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto laudantium illum eveniet, explicabo Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, velit.
+                    <div class="line"></div>
+                    </div>
+                    
 
-            <h2>leistungen</h2>
-            <div id="cards">
-                <div></div>
-                <div></div>
-                <div></div>
+                    <div id="cards">
+                        <div class="card">
+                            <div class="kreis">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="leistungText">
+                            <h5>HOHE QUALITÄT</h5>
+                            <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="kreis">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="leistungText">
+                            <h5>GUTER PREIS</h5>
+                            <span>Eirmod tempor invidunt ut labore et dolore magna aliquyam erat</span></div>
+                        </div>
+
+                        <div class="card">
+                            <div class="kreis">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="leistungText">
+                            <h5>ONLINE BERATUNG</h5>
+                            <span>At vero eos et accusam et justo duo dolores et ea rebum, Stet clita.</span>
+                            </div>
+                        </div>
+                
+                    </div>
+                </div>
             </div>
+
+        </section>
+
+
+        <section id="team">
+            <h2 class="sectionTitle">Unser Team</h2>
+            <div class="wrapper">
+                
+                <div class="persons">
+               
+                    <div class="person">
+                        <img src="man2.jpg">
+                        <div class="title">
+                                <h3>Max Mustermann 
+                                </h3><span>Geschäftsführer</span>
+                        </div>
+                        
+                        <button onclick="more(this)">Profil</button>
+                        <span class="profil">Bereits während des Studiums an der Wiener Musikuniversität arbeitete er intensiv an diversen Projekten.</span>
+                    </div>
+
+                    <div class="person">
+                        <img src="frau.jpg">
+                        <div class="title">
+                            <h3> Maria Musterfrau 
+                            </h3>
+                            <span>Musik Produzent</span>
+
+                        </div>
+
+                    
+                        <button onclick="more(this)">Profil</button>
+                        <span class="profil">Bereits während des Studiums an der Wiener Musikuniversität arbeitete er intensiv an diversen Projekten.</span>
+                    </div>
+
+                    <div class="person">
+                        <img src="man2.jpg">
+                        <div class="title">
+                            <h3> Martin Müller </h3>
+                            <span>Sales Manager</span>
+                        </div>
+                        <button onclick="more(this)">Profil</button>
+                        <span class="profil">Bereits während des Studiums an der Wiener Musikuniversität arbeitete er intensiv an diversen Projekten.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="uberuns">
+            <h2 class="sectionTitle" >Über Uns</h2>
+            <div class="wrapper col">
+                <p >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+                    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
+                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
+                    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
+                    gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit 
+                    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
+                    dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit 
+                    amet. </p>
+                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel 
+                    illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui 
+                    blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum 
+                    dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+                    laoreet dolore magna aliquam erat volutpat. 
+                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut </p>
+                    
+                    <p>aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate 
+                    velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et 
+                    accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis 
+                    dolore te feugait nulla facilisi.</p>
+            
+            </div>
+
+
+
+        </section>
+
+        <section id="kontakt">
+            <h2 class="sectionTitle">Kontakt</h2>
+            <div class="wrapper col">
+               
+                  <div class="formInhalt">
+                    <div class="container formular">
+                      <div class="formLink">
+                        <h5>Informationen</h5>
+                        <p>Sie können uns gerne unter diesem Kontaktformular kontaktieren.
+                            Wir werden uns schnellstmöglich bei Ihnen melden.</p>
+                        <div>
+                            <i class="fas fa-phone-alt"></i>
+                          <p>Tel:<br>0123 456 78 90<br>Ansprechpartner: Frau Musterman</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-globe"></i>
+                          <p>Web:<br><a href="">www.volumeup.de</a></p>
+                        </div>
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                          <p>E-Mail:<br>info@volumeup-musik.de</p>
+                        </div>
+          
+          
+          
+                      </div>
+                      <div class="formRecht">
+                      <h5>Kontaktformular</h5>
+                      <div class="flx">
+                        <input class="textBox" type="text" placeholder="Vor-und Nachnamme">
+                        <input class="textBox" type="email" placeholder="E-mail Addresse">
+                      </div>
+                      <textarea rows="7" cols="110" placeholder="Nachrichten"></textarea>
+                      <label><input type="checkbox"><span>Ich bin mit den Bedingungen der Richtlinien für den<a href=""> Datenschutz</a> einverstanden. *</span></label>
+                      <button>Senden</button>
+                    </div>
+          
+          
+                  </div>
+          </div>
+        
+            </div>
+        
+
+
 
         </section>
     </main>
     <footer>
+        <span>Copyright © WolumUp Website 2021</span>
+        <img src="logo1.jpg">
 
     </footer>
     
@@ -89,5 +253,6 @@
 
     
     <script src="script.js"></script>
+    
 </body>
 </html>

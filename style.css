@@ -5,16 +5,51 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Segoe UI";
+  text-align: center;
 }
 :root {
   --primaryColor: rgb(43, 18, 87);
-  --secondaryColor: rgb(173, 44, 44);
-  --logoHeight: 80px;
+  --secondaryColor: rgb(187, 20, 20);
+  --logoHeight: 70px;
+}
+.wrapper {
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.col {
+  flex-direction: column;
+  text-align: left;
+}
+section {
+  box-shadow: 0px 10px 10px -5px rgba(223, 221, 221, 0.91);
+  height: 90vh;
+  padding: 50px 0;
+}
+.sectionTitle {
+  font-size: 2.2em;
+  color: var(--primaryColor);
+  margin-bottom: 110px;
+}
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0px 10px 10px -8px rgba(150, 150, 150, 0.91);
+  z-index: 2000;
 }
 .container {
-  width: 1100px;
+  width: 100%;
   padding: 10px 30px;
   margin: 0 auto;
+
+  background-color: #ffffff;
+  color: #666666;
+  border: 1px solid #e1e1e1;
 }
 .logo {
   height: var(--logoHeight);
@@ -66,21 +101,14 @@ body {
   margin: 0;
   text-align: center;
 }
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+
 nav {
-  width: 1100px;
   display: flex;
-  justify-content: space-between;
- 
-  margin: 0 auto;
+  justify-content: space-evenly;
+  flex-grow: 1;
 }
 nav a {
   height: 35px;
-  display: inline;
   text-decoration: none;
   outline: none;
   font-size: 1.2em;
@@ -91,7 +119,11 @@ nav a {
   border-bottom: 1px solid transparent;
   transition: border-bottom 0.8s;
 }
-nav a:hover {
+
+.aktiv {
+  border-bottom: 3px solid var(--secondaryColor);
+}
+nav a:hover:not(a.aktiv) {
   border-bottom: 3px solid var(--secondaryColor);
 }
 .punkt {
@@ -108,9 +140,9 @@ nav a:hover {
   border-radius: 50%;
   padding: 8px;
 }
-/*****************************************************/
+/***********************SLIDER******************************/
 #slider {
-  height: 550px;
+  height: 620px;
 
   display: flex;
   justify-content: center;
@@ -167,17 +199,215 @@ nav a:hover {
   z-index: 500;
   font-family: "Courgette", cursive;
 }
-/***************************************************/
-#leistungen {
-  background-color: rgb(204, 237, 238);
+/*********************LEISTUNGEN******************************/
+
+#inhalt {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  color: #666666;
+}
+#inhaltText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: right;
+  width: 480px;
+}
+.line {
+  width: 300px;
+  border-bottom: 1px solid rgb(173, 169, 169);
+  margin: 50px 0;
 }
 #cards {
+  width: 480px;
+}
+.card {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 10px;
+}
+
+.card .kreis {
+  width: 100px;
+  height: 100px;
+  background-color: #d0d0d0;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2.5em;
+}
+.card .leistungText {
+  text-align: left;
+  margin-left: 20px;
+}
+.card h5 {
+  margin: 0;
+}
+
+/********** TEAM *************/
+#team {
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
+}
+.persons {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+#team .person {
+  width: 250px;
+
+  box-shadow: 0px 2px 12px 2px #949090;
+  border-radius: 5px;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  margin-bottom: 30px;
+  background-color: #f4f4f4;
+}
+
+.person img {
+  width: 100%;
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.person h3 {
+  font-size: 0.8em;
+  margin: 6px 0;
+}
+.person > div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 3px 5px;
 }
-#cards > div {
-  width: 200px;
-  height: 200px;
+.person button {
+  padding: 7px 0;
+  color: white;
   background-color: var(--primaryColor);
-  border-radius: 50%;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1.1em;
+  transition: all 0.5s;
+  margin: 0;
+  border-radius: 0;
+}
+.person button:hover,
+button:hover {
+  background-color: var(--secondaryColor);
+}
+
+.person .profil {
+  font-size: 0.9em;
+  margin-top: 8px;
+  display: none;
+}
+/*********************UBER UNS******************************/
+#uberuns p {
+  color: #666666;
+}
+/*********************KONTAKT******************************/
+#kontakt {
+  background-color: #f4f4f4;
+  padding: 40px 0;
+  height: 110vh;
+}
+#kontakt > h2 {
+  margin: 50px;
+}
+.formular {
+  display: flex;
+  align-items: flex-start;
+}
+
+/************form link*************/
+.formInhalt h5 {
+  font-size: 22px;
+  color: rgb(34, 34, 59);
+  margin: 20px 0 20px 0;
+  font-weight: 400;
+}
+.formLink {
+  flex-grow: 1;
+  padding-right: 50px;
+}
+.formLink h5 {
+  margin-left: 10px;
+}
+.formLink > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 15px 0 15px 10px;
+}
+.formLink p,
+.formRecht span {
+  color: var(--form-text);
+  font-size: 14px;
+  line-height: 1.4;
+  margin-left: 10px;
+}
+
+/************form recht*************/
+.formRecht {
+  flex-grow: 3;
+}
+.formRecht .textBox,
+.formRecht textarea {
+  width: 100%;
+  padding: 15px 30px;
+  font-size: 15px;
+  margin-right: 25px;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  background-color: var(--form-bgcolor);
+}
+.formRecht input:last-child {
+  margin-right: 0;
+}
+button {
+  display: block;
+  background-color: var(--primaryColor);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+/************FOOTER*************/
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primaryColor);
+  color: white;
+  padding: 40px 0;
+  font-size: 0.8em;
+}
+footer img {
+  margin-top: 25px;
+  width: 8%;
 }
