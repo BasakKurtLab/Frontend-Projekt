@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Courgette&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 <body onload="erst(0)" >
@@ -20,37 +21,38 @@
             <nav>
                 <a href="#" onclick="aktivieren(this)">Home</a>
                 <a href="#uberuns" onclick="aktivieren(this)">Über Uns</a>
-                <a href="#fotoGaleria" onclick="aktivieren(this)">Foto Galeria</a>
+                <a href="#fotoGalerie" onclick="aktivieren(this)">Foto Galerie</a>
                 <a href="#kontakt" onclick="aktivieren(this)">Kontakt</a>
+                <div class="punkt" >
+                    <div class="circle"></div>
+                </div>
+                <div id="info">
+                
+                    <i class="fas fa-times"></i>
+                    
+                    <img src="logo.jpg">
+                    <p>Seit über 20 Jahren bietet das Musikhaus  in Berlin eine breite Auswahl von Musikinstrumenten, aktuelle Songbooks, CDs, Schallplatten und vieles mehr.</p>
+                    <h5>Adresse</h5>
+                    <p>Musterstraße 1, 12345 Musterstadt</p>
+    
+                    <h5>Telefon:</h5>
+                    <p>0123 456 78 90</p>
+    
+                    <h5>E-mail</h5>
+                    <p>mail@website.de</p>
+    
+                    <h5>Öffnungszeiten</h5>
+                    <p>Montag: 10:00 – 18:00 Uhr</p>
+                    <p>Dienstag: 10:00 – 18:00 Uhr</p>
+                    <p>Mittwoch: 10:00 – 18:00 Uhr</p>
+                    <p>Donnerstag: 10:00 – 18:00 Uhr</p>
+                    <p>Freitag: 10:00 – 18:00 Uhr</p>
+                    <p>Samstag: 10:00 – 14:00 Uhr</p>
+                    <p>Sonntag: Geschlossen</p>
+                    
+                </div>
             </nav>
-            <div class="punkt" >
-                <div class="circle"></div>
-            </div>
-            <div id="info">
             
-                <i class="fas fa-times"></i>
-                
-                <img src="logo.jpg">
-                <p>Seit über 20 Jahren bietet das Musikhaus  in Berlin eine breite Auswahl von Musikinstrumenten, aktuelle Songbooks, CDs, Schallplatten und vieles mehr.</p>
-                <h5>Adresse</h5>
-                <p>Musterstraße 1, 12345 Musterstadt</p>
-
-                <h5>Telefon:</h5>
-                <p>0123 456 78 90</p>
-
-                <h5>E-mail</h5>
-                <p>mail@website.de</p>
-
-                <h5>Öffnungszeiten</h5>
-                <p>Montag: 10:00 – 18:00 Uhr</p>
-                <p>Dienstag: 10:00 – 18:00 Uhr</p>
-                <p>Mittwoch: 10:00 – 18:00 Uhr</p>
-                <p>Donnerstag: 10:00 – 18:00 Uhr</p>
-                <p>Freitag: 10:00 – 18:00 Uhr</p>
-                <p>Samstag: 10:00 – 14:00 Uhr</p>
-                <p>Sonntag: Geschlossen</p>
-                
-            </div>
         </div>
     </header>
 
@@ -66,20 +68,24 @@
             <h1 id="text"></h1>
         </section>
 
-        <section id="leistungen">
+        <section id="leistungen" >
             <h2 class="sectionTitle" >Leistungen</h2>
             <div class="wrapper flex">
                 
                 <div id="inhalt">
                     
-                    <div id="inhaltText">
+                    <div id="inhaltText" data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine" data-aos-duration="2000">
                     <div class="line"></div>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto laudantium illum eveniet, explicabo Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, velit.
                     <div class="line"></div>
                     </div>
                     
 
-                    <div id="cards">
+                    <div id="cards" data-aos="fade-left"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine" data-aos-duration="2000">
                         <div class="card">
                             <div class="kreis">
                                 <i class="fas fa-award"></i>
@@ -116,13 +122,15 @@
         </section>
 
 
-        <section id="team">
+        <section id="team" >
             <h2 class="sectionTitle">Unser Team</h2>
             <div class="wrapper flex">
                 
-                <div class="persons">
+                <div class="persons" >
                
-                    <div class="person">
+                    <div class="person" data-aos="flip-up"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">
                         <img src="man.jpg">
                         <div class="title">
                                 <h3>Max Mustermann 
@@ -133,11 +141,13 @@
                         <span class="profil">Bereits während des Studiums an der Wiener Musikuniversität arbeitete er intensiv an diversen Projekten.</span>
                     </div>
 
-                    <div class="person">
+                    <div class="person" data-aos="flip-up"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">
                         <img src="frau.jpg">
                         <div class="title">
                             <h3> Maria Musterfrau 
-                            </h3>
+                            </h3> 
                             <span>Musik Produzent</span>
 
                         </div>
@@ -147,7 +157,9 @@
                         <span class="profil">Bereits während des Studiums an der Wiener Musikuniversität arbeitete er intensiv an diversen Projekten.</span>
                     </div>
 
-                    <div class="person">
+                    <div class="person" data-aos="flip-up"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">
                         <img src="man2.jpg">
                         <div class="title">
                             <h3> Martin Müller </h3>
@@ -161,7 +173,10 @@
         </section>
 
 
-        <section id="uberuns">
+        <section id="uberuns" data-aos="fade-down"
+        data-aos-easing="ease-in-back"
+        data-aos-offset="0"
+        data-aos-duration="1000">
             <h2 class="sectionTitle" >Über Uns</h2>
             <div class="wrapper col">
                 <p >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
@@ -192,9 +207,9 @@
 
 
         </section>
-        <section id="fotoGaleria">
+        <section id="fotoGalerie">
        
-            <h2 class="sectionTitle">Foto Galeria</h2>
+            <h2 class="sectionTitle">Foto Galerie</h2>
        
         <div id="fotos">
     
@@ -285,8 +300,9 @@
 
 
 
-    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
+    
     
 </body>
 </html>

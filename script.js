@@ -1,3 +1,4 @@
+AOS.init();
 
 var bilder = ["bild1.jpg", "bild2.jpg", "bild3.jpg"];
 var texte = ["Musik - eine universelle Sprache!", "Musik ist Medizin für die Seele.", "Ohne Musik wäre das Leben ein Irrtum."];
@@ -98,6 +99,13 @@ function more(button) {
    
         let profil = button.parentElement.getElementsByClassName("profil")[0];
         
+    /*if (profil.style.maxHeight) {
+        profil.style.maxHeight = null;
+        
+    }
+    else {
+        profil.style.maxHeight = profil.scrollHeight + "px";
+        */
        
         if (profil.style.display=="none") {
             profil.style.display = "block";

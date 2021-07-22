@@ -19,18 +19,18 @@ body {
 .flex {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .col {
   display: flex;
   align-items: center;
   justify-content: center;
+
   flex-direction: column;
   text-align: left;
 }
 section {
   box-shadow: 0px 10px 10px -5px rgba(223, 221, 221, 0.91);
-
   padding: 50px 0;
 }
 .sectionTitle {
@@ -109,8 +109,10 @@ header {
 
 nav {
   display: flex;
-  justify-content: space-evenly;
-  flex-grow: 1;
+  align-items: center;
+}
+nav > *:not(:first-child) {
+  margin-left: 30px;
 }
 nav a {
   height: 35px;
@@ -198,11 +200,10 @@ nav a:hover:not(a.aktiv) {
   right: 40px;
 }
 #text {
-  font-weight: 900;
+  font-weight: 400;
   font-size: 2.5em;
   color: white;
   z-index: 500;
-  font-family: "Courgette", cursive;
 }
 /*********************LEISTUNGEN******************************/
 
@@ -277,8 +278,6 @@ nav a:hover:not(a.aktiv) {
 
   box-shadow: 0px 2px 12px 2px #949090;
   border-radius: 6px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
   margin-bottom: 30px;
   background-color: #f4f4f4;
 }
@@ -298,7 +297,7 @@ nav a:hover:not(a.aktiv) {
   justify-content: space-between;
   align-items: center;
   background-color: #f4f4f4;
-  padding: 3px 5px;
+  padding: 8px;
 }
 .person button {
   padding: 7px 0;
@@ -320,15 +319,21 @@ button:hover {
 .person .profil {
   font-size: 0.9em;
   margin-top: 8px;
+  /*max-height: none;
+  overflow: hidden;
+  transition: max-height 0.5s;*/
   display: none;
-  padding: 3px;
+  padding: 8px;
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 /*********************UBER UNS******************************/
 #uberuns p {
   color: #666666;
 }
 /*****************FOTO GALERIA*****************************/
-#fotoGaleria {
+#fotoGalerie {
   background-color: #f4f4f4;
   text-align: center;
 }
