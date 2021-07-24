@@ -10,7 +10,7 @@ body {
 :root {
   --primaryColor: rgb(43, 18, 87);
   --secondaryColor: rgb(187, 20, 20);
-  --logoHeight: 70px;
+  --logoHeight: 65px;
 }
 .wrapper {
   max-width: 1000px;
@@ -39,14 +39,19 @@ section {
   padding: 0 0 80px 0;
 }
 header {
+  background-color: white;
+  width: 100%;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: white;
-  width: 100%;
+
   box-shadow: 0px 10px 10px -8px rgba(150, 150, 150, 0.91);
+
   z-index: 2000;
 }
+
+
+
 .container {
   width: 100%;
   padding: 10px 30px;
@@ -56,11 +61,11 @@ header {
   color: #666666;
   border: 1px solid #e1e1e1;
 }
+
 .logo {
   height: var(--logoHeight);
   padding: 2px;
   cursor: pointer;
-  position: relative;
 }
 .logo img {
   height: 100%;
@@ -133,6 +138,14 @@ nav a {
 nav a:hover:not(a.aktiv) {
   border-bottom: 3px solid var(--secondaryColor);
 }
+
+#hamburger {
+  font-size: 1.2em;
+  padding: 18px;
+  display: none;
+  cursor: pointer;
+  text-align: right;
+}
 .punkt {
   background-color: var(--primaryColor);
   width: var(--logoHeight);
@@ -181,6 +194,7 @@ nav a:hover:not(a.aktiv) {
 #slider button {
   width: 60px;
   height: 60px;
+  padding: 5px;
   position: absolute;
   top: 50%;
   font-size: 2em;
@@ -332,7 +346,7 @@ button:hover {
 #uberuns p {
   color: #666666;
 }
-/*****************FOTO GALERIA*****************************/
+/*****************FOTO GALERIE*****************************/
 #fotoGalerie {
   background-color: #f4f4f4;
   text-align: center;
@@ -369,7 +383,7 @@ button:hover {
   justify-content: center;
   align-items: center;
 
-  transform: translateY(-100vh);
+  transform: translateY(-150vh);
   transition: transform 0.5s;
 }
 #fotoBox {
@@ -393,22 +407,9 @@ button:hover {
   transform: scale(0);
 }
 
-@media (max-width: 900px) {
-  #fotos {
-    width: 90%;
-  }
-}
-
-@media (max-width: 760px) {
-  #bigBox {
-    padding: 30px;
-  }
-}
-
 /*********************KONTAKT******************************/
 #kontakt {
   padding: 20px 0;
-  height: 110vh;
 }
 #kontakt > h2 {
   padding: 40px;
@@ -495,4 +496,44 @@ footer {
 footer img {
   margin-top: 25px;
   width: 8%;
+}
+
+
+
+@media (max-width: 992px) {
+  #fotos {
+    width: 90%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  #bigBox {
+    padding: 30px;
+  }
+  nav {
+    justify-content: center;
+    height: 54px;
+  }
+}
+
+@media (max-width: 576) {
+  nav {
+    flex-direction: column;
+    align-items: flex-end;
+    height: 54px;
+  }
+  .punkt {
+    display: none;
+  }
+  #hamburger {
+    display: block;
+  }
+  nav a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
 }

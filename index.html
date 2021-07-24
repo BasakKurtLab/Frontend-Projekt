@@ -13,16 +13,19 @@
 </head>
 <body onload="erst(0)" >
     <header>
+        
         <div class="wrapper flex">
             <div class="logo">
                 <img src="logo1.jpg">
             </div>
             
             <nav>
+                
                 <a href="#" onclick="aktivieren(this)">Home</a>
                 <a href="#uberuns" onclick="aktivieren(this)">Über Uns</a>
                 <a href="#fotoGalerie" onclick="aktivieren(this)">Foto Galerie</a>
                 <a href="#kontakt" onclick="aktivieren(this)">Kontakt</a>
+                <i class="fas fa-bars" id="hamburger" onclick="menuShow()"></i>
                 <div class="punkt" >
                     <div class="circle"></div>
                 </div>
@@ -63,7 +66,7 @@
             <div id="overlay"></div>
 
             <button id="back" onclick="play(-1)" ><i class="fas fa-angle-double-left"></i></button>
-            <button id="next" onclick="play(1)" ><i class="fas fa-angle-double-right"></i></button>
+            <button  id="next" onclick="play(1)" ><i class="fas fa-angle-double-right"></i></button>
 
             <h1 id="text"></h1>
         </section>
