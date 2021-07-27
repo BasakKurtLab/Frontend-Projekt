@@ -6,11 +6,20 @@ body {
   margin: 0;
   font-family: "Segoe UI";
   text-align: center;
+  
 }
 :root {
-  --primaryColor: rgb(43, 18, 87);
-  --secondaryColor: rgb(187, 20, 20);
+  --primaryColor:#001662;
+  --secondaryColor:#c40100;
   --logoHeight: 65px;
+  --textColor:#666666;
+  
+  --firstSectionBgColor:white;
+  --secondSectionBgColor:#eef2f5;
+  --teamsProfilBox-shadow: 0px 2px 15px 2px rgb(112 120 134 / 57%);
+  --footerTextColor:rgb(214, 207, 207);
+  --footerÜberschriftColor:#e7e1e1;
+
 }
 .wrapper {
   max-width: 1000px;
@@ -25,18 +34,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
   flex-direction: column;
   text-align: left;
 }
 section {
   box-shadow: 0px 10px 10px -5px rgba(223, 221, 221, 0.91);
-  padding: 50px 0;
+  padding: 60px 0 80px 0;
 }
 .sectionTitle {
   font-size: 2.2em;
+  font-weight: 600;
   color: var(--primaryColor);
-  padding: 0 0 80px 0;
+  padding: 0 0 50px 0;
 }
 header {
   background-color: white;
@@ -49,18 +58,12 @@ header {
 
   z-index: 2000;
 }
-
-
-
-.container {
-  width: 100%;
-  padding: 10px 30px;
-  margin: 0 auto;
-
-  background-color: #ffffff;
-  color: #666666;
-  border: 1px solid #e1e1e1;
+i{
+  cursor:pointer;
+  transition: all 0.5s;
 }
+
+
 
 .logo {
   height: var(--logoHeight);
@@ -92,7 +95,7 @@ header {
   align-self: flex-end;
   text-align: right;
   font-size: 1.5em;
-  color: black;
+  color: var(--primaryColor);
   cursor: pointer;
   transition: transform 0.5s;
 }
@@ -105,11 +108,13 @@ header {
 #info h5 {
   padding: 0;
   margin-bottom: 2px;
+  color:var(--primaryColor)
 }
 #info p {
   padding: 0;
   margin: 0;
   text-align: center;
+  color:var(--textColor);
 }
 
 nav {
@@ -124,7 +129,7 @@ nav a {
   text-decoration: none;
   outline: none;
   font-size: 1.2em;
-  font-weight: bold;
+  font-weight: 500;
   color: var(--primaryColor);
   padding: 4px 0;
   cursor: pointer;
@@ -140,11 +145,15 @@ nav a:hover:not(a.aktiv) {
 }
 
 #hamburger {
-  font-size: 1.2em;
-  padding: 18px;
+  font-size: 1.5em;
+  padding: 19px;
   display: none;
   cursor: pointer;
   text-align: right;
+  transition: all 0.8s;
+}
+#hamburger:hover{
+  color:var(--secondaryColor);
 }
 .punkt {
   background-color: var(--primaryColor);
@@ -219,15 +228,16 @@ nav a:hover:not(a.aktiv) {
   color: white;
   z-index: 500;
 }
+
 /*********************LEISTUNGEN******************************/
 
 #inhalt {
-  width: 1000px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
-  color: #666666;
+  color: var(--textColor);
 }
 #inhaltText {
   display: flex;
@@ -236,6 +246,7 @@ nav a:hover:not(a.aktiv) {
   align-items: flex-end;
   text-align: right;
   width: 480px;
+  
 }
 .line {
   width: 300px;
@@ -244,6 +255,7 @@ nav a:hover:not(a.aktiv) {
 }
 #cards {
   width: 480px;
+  
 }
 .card {
   display: flex;
@@ -256,6 +268,7 @@ nav a:hover:not(a.aktiv) {
 .card .kreis {
   width: 100px;
   height: 100px;
+  flex-shrink: 0;
   background-color: #d0d0d0;
   border-radius: 50%;
 
@@ -276,10 +289,10 @@ nav a:hover:not(a.aktiv) {
 /********** TEAM *************/
 #team {
   margin-bottom: 20px;
-  background-color: #f4f4f4;
+  background-color: var(--secondSectionBgColor);
 }
 .persons {
-  width: 1000px;
+  width: 900px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -290,10 +303,11 @@ nav a:hover:not(a.aktiv) {
 #team .person {
   width: 250px;
 
-  box-shadow: 0px 2px 12px 2px #949090;
+  box-shadow: var(--teamsProfilBox-shadow);
   border-radius: 6px;
   margin-bottom: 30px;
-  background-color: #f4f4f4;
+  background-color: var(--secondSectionBgColor);
+  margin:15px;
 }
 
 .person img {
@@ -306,13 +320,26 @@ nav a:hover:not(a.aktiv) {
   font-size: 0.8em;
   margin: 6px 0;
 }
-.person > div {
+.person > .title {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f4f4f4;
+  flex-direction: column;
+
+background-color: var(--secondSectionBgColor);
   padding: 8px;
 }
+.title>span{
+  margin-bottom: 5px;
+}
+.title>span:first-child{
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #2e2d2d;
+}
+.title>span:last-child{
+  font-size: 0.9em;
+  
+}
+
 .person button {
   padding: 7px 0;
   color: white;
@@ -323,7 +350,10 @@ nav a:hover:not(a.aktiv) {
   font-size: 1.1em;
   transition: all 0.5s;
   margin: 0;
-  border-radius: 0;
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
 }
 .person button:hover,
 button:hover {
@@ -332,23 +362,34 @@ button:hover {
 
 .person .profil {
   font-size: 0.9em;
-  margin-top: 8px;
-  /*max-height: none;
+  line-height: 1.5em;
+  
+  max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s;*/
-  display: none;
-  padding: 8px;
+  transition: max-height 0.5s;
+
+ 
   border-radius: 6px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+.profil>div{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.2em;
+  padding:8px;
+  color:var(--primaryColor);
+}
+#team i:hover{
+  color:var(--secondaryColor);
+}
 /*********************UBER UNS******************************/
 #uberuns p {
-  color: #666666;
+  color: var(--textColor);
 }
 /*****************FOTO GALERIE*****************************/
 #fotoGalerie {
-  background-color: #f4f4f4;
+  background-color: var(--secondSectionBgColor);
   text-align: center;
 }
 #fotos {
@@ -362,7 +403,7 @@ button:hover {
 #fotos img {
   width: 250px;
   margin: 20px;
-  box-shadow: 0px 2px 12px 2px #000000;
+  box-shadow: var(--teamsProfilBox-shadow);
   transition: transform 0.5s;
   cursor: pointer;
 }
@@ -408,17 +449,20 @@ button:hover {
 }
 
 /*********************KONTAKT******************************/
-#kontakt {
-  padding: 20px 0;
-}
-#kontakt > h2 {
-  padding: 40px;
-}
+
+
 .formular {
-  background-color: #f4f4f4;
+  background-color: var(--secondSectionBgColor);
   display: flex;
   align-items: flex-start;
   border-radius: 5px;
+}
+.container {
+  width: 100%;
+  padding: 10px 30px;
+  margin: 0 auto;
+  color: var(--textColor);
+  border: 1px solid #e1e1e1;
 }
 
 /************form link*************/
@@ -428,6 +472,7 @@ button:hover {
   margin: 20px 0 20px 0;
   font-weight: 400;
 }
+
 .formLink {
   flex-grow: 1;
   padding-right: 50px;
@@ -443,7 +488,7 @@ button:hover {
 }
 .formLink p,
 .formRecht span {
-  color: var(--form-text);
+  color: var(--textColor);
   font-size: 14px;
   line-height: 1.4;
   margin-left: 10px;
@@ -456,13 +501,16 @@ button:hover {
 .formRecht .textBox,
 .formRecht textarea {
   width: 100%;
-  padding: 15px 30px;
+  padding: 15px;
   font-size: 15px;
   margin-right: 25px;
   border: 1px solid #e0e0e0;
   border-radius: 3px;
   margin-bottom: 20px;
-  background-color: var(--form-bgcolor);
+  outline: none;
+  font-family: 'Segoe UI';
+
+  
 }
 .formRecht input:last-child {
   margin-right: 0;
@@ -484,44 +532,106 @@ button {
 
 /************FOOTER*************/
 footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  
   background-color: var(--primaryColor);
-  color: white;
+  color: var(--footerTextColor);
   padding: 40px 0;
   font-size: 0.8em;
+  text-align: left;
 }
-footer img {
-  margin-top: 25px;
-  width: 8%;
+footer div{
+  flex-shrink: 1;
+}
+footer h5{
+  color:var(--footerÜberschriftColor);
+}
+footer .linie {
+  border:1px solid rgb(206, 201, 201);
+ 
+  margin-bottom:5px;
+  
+}
+footer .top{
+  align-items: flex-start;
+}
+footer p{
+  margin-bottom: 0.7em;
+}
+footer .links{
+justify-content: flex-start;
+}
+footer i{
+  font-size: 1.5em;
+  padding:5px;
+}
+footer i:hover{
+  color:var(--secondaryColor);
+}
+
+footer span{
+  font-size: 0.9em;
+  color:#8b8686;
+  text-align: center;
+}
+footer .bottom{
+  display: flex;
+  justify-content: center;
+  margin:40px 0 5px 0;
 }
 
 
-
-@media (max-width: 992px) {
-  #fotos {
-    width: 90%;
+@media (max-width: 576px) {
+  
+  .wrapper{
+    max-width:400px ;
+    flex-shrink: 1;
+    
   }
+  #inhalt>*{
+    width: 300px;
+  }
+  .persons{
+    padding:0 60px;
+  }
+  #slider button{
+    font-size: 1.5em;
+  }
+  #slider{
+    height: 300px;
+  }
+  .person{
+    width:180px;
+  }
+  .sectionTitle{
+    font-size: 1.5em;
 
+  }
+  #fotoBox i {
+   
+    top: -1em;
+    right: -1em;
+    font-size: 0.8em;
+    
+  }
+  footer>div{
+    justify-content: center;
+  }
+ 
 }
 
 @media (max-width: 768px) {
+  #slider{
+    height: 400px;
+  }
   #bigBox {
     padding: 30px;
   }
   nav {
-    justify-content: center;
-    height: 54px;
-  }
-}
-
-@media (max-width: 576) {
-  nav {
     flex-direction: column;
     align-items: flex-end;
-    height: 54px;
+    height: 65px;
+    overflow: hidden;
+    transition: all 1s;
   }
   .punkt {
     display: none;
@@ -530,10 +640,59 @@ footer img {
     display: block;
   }
   nav a {
-    width: 100%;
+    
     display: flex;
     align-items: center;
     justify-content: flex-end;
     flex-grow: 1;
+  }
+  .wrapper{
+    min-width:500px ;
+    padding: 0 20px;
+    align-items: flex-start;
+    
+  }
+  .persons{
+    padding:0 110px;
+  }
+ 
+#slider #text{
+  font-size: 1.5em;
+}
+p{
+  0.8em;
+}
+footer>div{
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+}
+
+
+@media (max-width: 992px) {
+  #fotos {
+    width: 90%;
+  }
+  
+  #inhalt {
+    justify-content:center;
+  }
+
+  .persons {
+    padding: 0 100px;
+    justify-content: space-evenly;
+  }
+  
+  
+  .sectionTitle{
+    font-size: 2em;
+  }
+  #uberuns>.wrapper{
+    padding:10px;
+    
+  }
+  footer>.wrapper{
+    padding:10px;
   }
 }

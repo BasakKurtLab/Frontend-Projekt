@@ -1,6 +1,6 @@
 AOS.init();
 
-var bilder = ["bild1.jpg", "bild2.jpg", "bild3.jpg"];
+var bilder = ["images/bild1.jpg", "images/bild2.jpg", "images/bild3.jpg"];
 var texte = ["Musik - eine universelle Sprache!", "Musik ist Medizin für die Seele.", "Ohne Musik wäre das Leben ein Irrtum."];
 const info = document.querySelector("#info");
 
@@ -12,6 +12,9 @@ var bild = document.getElementById("bild");
 const punkt = document.querySelector(".punkt");
 const cross = document.querySelector("#info>i");
 
+const nav = document.getElementById("nav");
+let menuOn = false;
+
 
 
 
@@ -19,7 +22,18 @@ aktuel = 0;
 var meinInterval;
 
 
+function play(n) {
+    clearInterval(meinInterval);
+    
+    buttonCheck(n);
+    aktuel += n;
+    
+    bild.style.backgroundImage = `url('${bilder[aktuel]}')`;
+    text.innerHTML = texte[aktuel];
 
+    setTimeout(erst(aktuel), 3000);
+
+}
 
 
 function erst(i) {
@@ -45,7 +59,7 @@ function erst(i) {
 
                 
                 text.innerHTML = texte[i];
-        }, 4000);
+        }, 3000);
           
 }
 
@@ -53,18 +67,7 @@ function erst(i) {
         
 
 
-function play(n) {
-        clearInterval(meinInterval);
-        
-        buttonCheck(n);
-        aktuel += n;
-        
-        bild.style.backgroundImage = `url('${bilder[aktuel]}')`;
-        text.innerHTML = texte[aktuel];
 
-        setTimeout(erst(aktuel), 3000);
-
-}
 
 
 
@@ -97,29 +100,30 @@ cross.onclick= function() {
     
 function more(button) {
    
-        let profil = button.parentElement.getElementsByClassName("profil")[0];
+    let profil = button.parentElement.getElementsByClassName("profil")[0];
+
+    
+    if (profil.style.maxHeight) {
         
-    /*if (profil.style.maxHeight) {
         profil.style.maxHeight = null;
+
+        button.style.borderBottomLeftRadius = "6px";
+        button.style.borderBottomRightRadius = "6px";
         
     }
     else {
         profil.style.maxHeight = profil.scrollHeight + "px";
-        */
+        button.style.borderBottomLeftRadius = "0";
+        button.style.borderBottomRightRadius = "0";
+
        
-        if (profil.style.display=="none") {
-            profil.style.display = "block";
-           
-            
-            
-        }
-        else {
-                profil.style.display = "none";
-            
-           
-        }
+       
         
+    }
+    
 }
+
+
 let last ;
 
 function aktivieren(element) {
@@ -130,6 +134,13 @@ function aktivieren(element) {
 
         {       
             element.classList.add("aktiv");
+
+            if (nav.style.height = "250px") {
+                nav.style.height = "65px";
+                menuOn = !menuOn;
+            }
+            
+
     
             if (last != null)
             {
@@ -182,3 +193,15 @@ fotoCross.onclick = function () {
     
 
 }
+
+
+function menuShow() 
+    
+    {
+        if(menuOn)
+            nav.style.height = "65px";
+        else
+            nav.style.height = "250px";
+    
+            menuOn = !menuOn;
+    }

@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Volume-Up</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Courgette&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+    <link rel="shortcut icon" type="image/x-icon" href="images/music-notes.png" />
 </head>
 <body onload="erst(0)" >
     <header>
         
         <div class="wrapper flex">
             <div class="logo">
-                <img src="logo1.jpg">
+                <img src="images/logo1.jpg">
             </div>
             
-            <nav>
-                
+            <nav id="nav">
+                <i class="fas fa-bars" id="hamburger" onclick="menuShow()"></i>
                 <a href="#" onclick="aktivieren(this)">Home</a>
                 <a href="#uberuns" onclick="aktivieren(this)">Über Uns</a>
                 <a href="#fotoGalerie" onclick="aktivieren(this)">Foto Galerie</a>
                 <a href="#kontakt" onclick="aktivieren(this)">Kontakt</a>
-                <i class="fas fa-bars" id="hamburger" onclick="menuShow()"></i>
+                
                 <div class="punkt" >
                     <div class="circle"></div>
                 </div>
@@ -33,7 +33,7 @@
                 
                     <i class="fas fa-times"></i>
                     
-                    <img src="logo.jpg">
+                    <img src="images/logo.jpg">
                     <p>Seit über 20 Jahren bietet das Musikhaus  in Berlin eine breite Auswahl von Musikinstrumenten, aktuelle Songbooks, CDs, Schallplatten und vieles mehr.</p>
                     <h5>Adresse</h5>
                     <p>Musterstraße 1, 12345 Musterstadt</p>
@@ -69,6 +69,7 @@
             <button  id="next" onclick="play(1)" ><i class="fas fa-angle-double-right"></i></button>
 
             <h1 id="text"></h1>
+            
         </section>
 
         <section id="leistungen" >
@@ -79,16 +80,18 @@
                     
                     <div id="inhaltText" data-aos="fade-right"
                     data-aos-offset="300"
-                    data-aos-easing="ease-in-sine" data-aos-duration="2000">
-                    <div class="line"></div>
+                    data-aos-easing="ease-in-sine" data-aos-duration="2000"
+                    data-aos-once="true">
+                        <div class="line"></div>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto laudantium illum eveniet, explicabo Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, velit.
-                    <div class="line"></div>
+                        <div class="line"></div>
                     </div>
                     
 
                     <div id="cards" data-aos="fade-left"
                     data-aos-offset="300"
-                    data-aos-easing="ease-in-sine" data-aos-duration="2000">
+                    data-aos-easing="ease-in-sine" data-aos-duration="2000"
+                    data-aos-once="true">
                         <div class="card">
                             <div class="kreis">
                                 <i class="fas fa-award"></i>
@@ -133,43 +136,46 @@
                
                     <div class="person" data-aos="flip-up"
                     data-aos-easing="ease-out-cubic"
-                    data-aos-duration="2000">
-                        <img src="man.jpg">
+                    data-aos-duration="2000" data-aos-once="true">
+                        <img src="images/man.jpg">
                         <div class="title">
-                                <h3>Max Mustermann 
-                                </h3><span>Geschäftsführer</span>
+                                <span>Max Mustermann 
+                                </span>
+                                <span>Geschäftsführer</span>
                         </div>
                         
                         <button onclick="more(this)">Profil</button>
-                        <span class="profil">Bereits während des Studiums an der Wiener Musikuniversität arbeitete er intensiv an diversen Projekten.</span>
+                        <div class="profil">Bereits während des Studiums an der Wiener Musikuniversität arbeitete er intensiv an diversen Projekten.<div><i class="fab fa-twitter"></i><i class="fab fa-facebook"></i><i class="fab fa-linkedin-in"></i></div></div>
                     </div>
 
                     <div class="person" data-aos="flip-up"
                     data-aos-easing="ease-out-cubic"
-                    data-aos-duration="2000">
-                        <img src="frau.jpg">
+                    data-aos-duration="2000" data-aos-once="true">
+                        <img src="images/frau.jpg">
                         <div class="title">
-                            <h3> Maria Musterfrau 
-                            </h3> 
+                            <span>Maria Musterfrau 
+                            </span>
                             <span>Musik Produzent</span>
 
                         </div>
-
-                    
                         <button onclick="more(this)">Profil</button>
-                        <span class="profil">Bereits während des Studiums an der Wiener Musikuniversität arbeitete er intensiv an diversen Projekten.</span>
+                        <div class="profil">Bereits während des Studiums an der Wiener Musikuniversität arbeitete er intensiv an diversen Projekten.
+                            <div><i class="fab fa-twitter"></i><i class="fab fa-facebook"></i><i class="fab fa-linkedin-in"></i></div>
+                        </div>
                     </div>
 
                     <div class="person" data-aos="flip-up"
                     data-aos-easing="ease-out-cubic"
-                    data-aos-duration="2000">
-                        <img src="man2.jpg">
+                    data-aos-duration="2000" data-aos-once="true">
+                        <img src="images/man2.jpg">
                         <div class="title">
-                            <h3> Martin Müller </h3>
+                            <span>Martin Müller
+                            </span>
                             <span>Sales Manager</span>
+                            
                         </div>
                         <button onclick="more(this)">Profil</button>
-                        <span class="profil">Bereits während des Studiums an der Wiener Musikuniversität arbeitete er intensiv an diversen Projekten.</span>
+                        <div class="profil">Bereits während des Studiums an der Wiener Musikuniversität arbeitete er intensiv an diversen Projekten.<div><i class="fab fa-twitter"></i><i class="fab fa-facebook"></i><i class="fab fa-linkedin-in"></i></div></div>
                     </div>
                 </div>
             </div>
@@ -179,26 +185,20 @@
         <section id="uberuns" data-aos="fade-down"
         data-aos-easing="ease-in-back"
         data-aos-offset="0"
-        data-aos-duration="1000">
+        data-aos-duration="1000" data-aos-once="true">
             <h2 class="sectionTitle" >Über Uns</h2>
             <div class="wrapper col">
-                <p >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+                
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
                     invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
                     et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
                     Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
-                    diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
-                    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
-                    gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit 
-                    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
-                    dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit 
-                    amet. </p>
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diaamet. </p>
+
                     <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel 
                     illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui 
                     blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum 
-                    dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
-                    laoreet dolore magna aliquam erat volutpat. 
-                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut </p>
+                    </p>
                     
                     <p>aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate 
                     velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et 
@@ -211,27 +211,32 @@
 
         </section>
         <section id="fotoGalerie">
-       
             <h2 class="sectionTitle">Foto Galerie</h2>
+            <div class="wrapper flex">
        
+            
+       
+            
         <div id="fotos">
     
-            <img src="1.jpg">
-            <img src="2.jpg">
+            <img src="images/1.jpg">
+            <img src="images/2.jpg">
             
-            <img src="3.jpg">
+            <img src="images/3.jpg">
     
-            <img src="4.jpg">
+            <img src="images/4.jpg">
     
-            <img src="5.jpg">
+            <img src="images/5.jpg">
             
-            <img src="6.jpg">
+            <img src="images/6.jpg">
     
         </div>
+    </div>
+    
     
         <div id="bigBox">
             <div id="fotoBox">
-                <img src="https://cdn.pixabay.com/photo/2021/05/25/12/59/mountain-6282389_960_720.jpg">
+                <img src="">
                 <i class="far fa-times-circle"></i>
                 
             </div>
@@ -248,7 +253,7 @@
             <h2 class="sectionTitle">Kontakt</h2>
             <div class="wrapper col">
                
-                  <div class="formInhalt">
+                <div class="formInhalt">
                     <div class="container formular">
                       <div class="formLink">
                         <h5>Informationen</h5>
@@ -283,18 +288,43 @@
           
           
                   </div>
-          </div>
+                </div>
         
             </div>
-        
-
-
-
+    
         </section>
     </main>
     <footer>
-        <span>Copyright © WolumUp Website 2021</span>
-        <img src="logo1.jpg">
+        <div class="wrapper flex top">
+            <div>
+                <h3>Anschrift</h3>
+                <div class="linie"></div>
+                <div class="flex">
+                    
+                <p>Adress:<br>Musterman Str. 20<br>12345 Musterstadt</p>
+                </div>
+                <div class="flex">
+                <p>Tel:<br>0123 123 45</p>
+                </div>
+                <div class="flex">
+
+                <p>E-Mail:<br>info@volumeup-musik.de</p>
+                
+
+                </div>
+                <div class="flex links"><i class="fab fa-twitter"></i><i class="fab fa-facebook"></i><i class="fab fa-linkedin-in"></i></div>
+            </div> 
+
+            <div id="map"><h3>Lage & Routenplanung</h3>
+                <div class="linie"></div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.4613168593864!2d13.367213315690874!3d52.525087143604836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851bdfbdfe77b%3A0x7a3c781495bcfcaa!2sBerlin%20Central%20Station!5e0!3m2!1sen!2sde!4v1627342513684!5m2!1sen!2sde" width="500" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+                
+            
+        </div>
+        <div class="bottom">
+            <span>Copyright© 2021 bei Web Entwicklerinnen - Alle Rechte vorbehalten.</span>
+            </div>   
+        
 
     </footer>
     
