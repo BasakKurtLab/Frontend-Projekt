@@ -47,15 +47,34 @@ section {
   color: var(--primaryColor);
   padding: 0 0 50px 0;
 }
+button{
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+#scrollBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 40px; 
+  z-index: 5000; 
+  background-color: #9fa7ad; 
+  padding: 15px; 
+  border-radius: 10px; 
+  font-size: 18px; 
+}
+
+#scrollBtn:hover {background-color: #747e86; 
+}
+/*********************HEADER**********************************/
 header {
   background-color: white;
   width: 100%;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-
   box-shadow: 0px 10px 10px -8px rgba(150, 150, 150, 0.91);
-
   z-index: 2000;
 }
 i{
@@ -208,10 +227,7 @@ nav a:hover:not(a.aktiv) {
   top: 50%;
   font-size: 2em;
   background-color: rgba(0, 0, 0, 0.308);
-  outline: none;
-  border: none;
-  cursor: pointer;
-  color: white;
+  
 }
 #slider button:hover {
   background-color: rgba(58, 56, 56, 0.603);
@@ -286,7 +302,7 @@ nav a:hover:not(a.aktiv) {
   margin: 0;
 }
 
-/********** TEAM *************/
+/********************* TEAM **************************/
 #team {
   margin-bottom: 20px;
   background-color: var(--secondSectionBgColor);
@@ -342,10 +358,7 @@ background-color: var(--secondSectionBgColor);
 
 .person button {
   padding: 7px 0;
-  color: white;
   background-color: var(--primaryColor);
-  border: none;
-  outline: none;
   width: 100%;
   font-size: 1.1em;
   transition: all 0.5s;
@@ -518,45 +531,35 @@ button:hover {
 button {
   display: block;
   background-color: var(--primaryColor);
-  color: white;
+  
   padding: 10px 25px;
   border-radius: 10px;
-  outline: none;
-  border: none;
+ 
   font-size: 15px;
   margin-top: 30px;
   margin-bottom: 30px;
   transition: all 0.5s;
-  cursor: pointer;
+  
 }
 
-/************FOOTER*************/
+/***********************************FOOTER************************/
 footer {
   
   background-color: var(--primaryColor);
   color: var(--footerTextColor);
-  padding: 40px 0;
+  padding: 20px 0;
   font-size: 0.8em;
   text-align: left;
 }
-footer div{
-  flex-shrink: 1;
-}
-footer h5{
-  color:var(--footerÜberschriftColor);
-}
+footer div{  flex-shrink: 1;}
+footer h5{color:var(--footerÜberschriftColor);}
 footer .linie {
   border:1px solid rgb(206, 201, 201);
- 
   margin-bottom:5px;
   
 }
-footer .top{
-  align-items: flex-start;
-}
-footer p{
-  margin-bottom: 0.7em;
-}
+footer .top{ align-items: flex-start;}
+footer p{margin-bottom: 0.7em;}
 footer .links{
 justify-content: flex-start;
 }
@@ -564,9 +567,7 @@ footer i{
   font-size: 1.5em;
   padding:5px;
 }
-footer i:hover{
-  color:var(--secondaryColor);
-}
+footer i:hover{color:var(--secondaryColor);}
 
 footer span{
   font-size: 0.9em;
@@ -616,7 +617,7 @@ footer .bottom{
   footer>div{
     justify-content: center;
   }
- 
+
 }
 
 @media (max-width: 768px) {
@@ -666,7 +667,9 @@ footer>div{
   flex-wrap: wrap;
   justify-content: center;
 }
-
+#scrollBtn{
+  opacity: 0;
+}
 }
 
 
