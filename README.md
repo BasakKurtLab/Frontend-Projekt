@@ -1,2 +1,2 @@
 # Frontend-Projekt
-https://basakkurtlab.github.io/Frontend-Projek
+ https://basakkurtlab.github.io/Frontend-Projekt/
