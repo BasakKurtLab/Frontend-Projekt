@@ -2,4 +2,5 @@
  https://basakkurtlab.github.io/Frontend-Projekt/
  
  
-![musik](https://user-images.githubusercontent.com/79793959/139825224-4c3360f9-0aea-4535-adc5-95600b8967f8.png)
+
+![musik](https://user-images.githubusercontent.com/79793959/140030248-27cceb88-66ad-40d6-b889-f38b9ba65e35.png)
